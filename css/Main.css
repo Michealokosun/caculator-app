@@ -17,6 +17,7 @@ html{
 
 .container{
     max-width: 1440px !important;
+    margin:  0 auto !important;
 }
 
 
@@ -27,6 +28,11 @@ body{
     align-items: center;
     min-height: 90vh;
 
+}
+
+
+.calculator{
+    margin-inline: auto
 }
 
 
@@ -225,7 +231,9 @@ body{
 
 @media only screen and (max-width:40rem) {
 
-
+.container{
+    max-width: 334px !important;
+}
     
     .screen h1{
         font-size: 2rem;

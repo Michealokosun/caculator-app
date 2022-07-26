@@ -124,8 +124,8 @@ body{
     
 }
 
-.keys p:hover{
-    background-color: white;
+.keys button:hover{
+color: white !important;
 }
 
   
