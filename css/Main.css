@@ -1,0 +1,237 @@
+
+
+:root{
+    --background-color:hsl(222, 26%, 31%);
+    --keypad-background-toggle-background: hsl(223, 31%, 20%);
+    --screen-background:hsl(224, 36%, 15%);
+    --equaltokey-background-toggle-color:hsl(6, 63%, 50%);
+    --equaltokey-shadow:  hsl(6, 70%, 34%);
+    --key-shadows:hsl(28, 16%, 65%);
+    --key-text-color: hsl(221, 14%, 31%);
+    --text-color:  rgb(255, 255, 255);
+}
+
+html{
+    font-size: 13px;
+}
+
+.container{
+    max-width: 1440px !important;
+}
+
+
+body{
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+
+}
+
+
+
+
+.calculator .calc-logo{
+    color: var(--text-color);
+    font-weight: 700;
+    
+}
+
+
+
+.custom-check{
+    border: 1px solid transparent;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+.theme-form{
+    background-color: var(--keypad-background-toggle-background);
+    display: flex;
+
+}
+
+
+.custom-check input{
+    display: none;
+}
+
+
+.custom-check .checkmark{
+    width: calc(100% - 6px);
+    height: calc(100% - 6px);
+    display: none;
+    background-color: var(--equaltokey-background-toggle-color);
+    border-radius: 50%;
+
+}
+
+.custom-check input:checked +  .checkmark{
+    display: inline-block;
+
+}
+
+
+
+
+
+.num{
+    font-size: .8rem;
+}
+
+.screen{
+    background-color: var(--screen-background);
+    color: var(--text-color);
+    text-align: right;
+    padding: 15px 20px;
+    border-radius: 16px;
+    font-weight: 700;
+
+}
+
+.screen .form-screen p{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    text-align: right;
+    height: 4rem;
+    color: white;
+    max-width: 100%;
+    width: 400px;
+    font-size: 2rem;
+    overflow-y: scroll;
+    /* border:  1px solid red; */
+    position: relative;
+
+    
+
+}
+
+
+.screen .form-screen p::-webkit-scrollbar{
+    /* display: none; */
+    height: 2px;
+    width: 60%;
+    background-color: rgba(121, 180, 219, 0.425);
+}
+
+
+
+.screen .form-screen p::after{
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height:21px;
+    margin-right: .4rem;
+    background-color: rgb(244, 243, 245);
+    animation: pop .4s .2s alternate-reverse infinite;
+
+    
+}
+
+@keyframes pop {
+    0%{
+        /* background-color: red; */
+        opacity: 0;
+    }
+
+    100%{
+        /* background-color: aqua; */
+        opacity: 1;
+    }
+    
+}
+
+
+
+
+.keypad{
+    background-color: var(--keypad-background-toggle-background);
+    border-radius: 16px;
+
+}
+
+ 
+
+.keys{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    gap: 30px;
+}
+
+.keys button{
+    color:  hsl(221, 14%, 31%);
+    font-weight: 700;
+    font-size: 2rem;
+    background-color: hsl(30, 25%, 89%);
+    text-align: center;
+    box-shadow: 0 .2rem .08rem  hsl(28, 16%, 65%);
+    cursor: pointer;
+    outline: none !important;
+   
+}
+
+.keys button:nth-child(4){
+    background-color: var(--background-color);
+    box-shadow: 0 .2rem .08rem  hsl(221, 26%, 24%) ;
+    
+    
+    color: white;
+}
+
+
+.keys button:nth-child(17){
+    grid-column:  span 2/3;
+    background-color: var(--background-color);
+    box-shadow: 0 .2rem .08rem  hsl(221, 26%, 24%) ;
+
+    color: white;
+}
+.keys button:nth-child(18){
+    grid-column:  span 2/5;
+    background-color: var(--equaltokey-background-toggle-color);
+    box-shadow: 0 .2rem .08rem  hsl(6, 66%, 37%);
+
+    color: white;
+    
+}
+
+.keys p:hover{
+    background-color: white;
+}
+
+ .keys .del {
+    background-color:  hsl(222, 21%, 41%);
+    color: white;
+    box-shadow: 0 .2rem .08rem  hsl(220, 39%, 32%) ;
+    
+} 
+
+
+
+
+
+
+
+@media only screen and (max-width:40rem) {
+
+
+    
+    .screen h1{
+        font-size: 2rem;
+    }
+    
+}
+
+
+

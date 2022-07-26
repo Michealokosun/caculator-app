@@ -1,0 +1,131 @@
+/*
+#### Backgrounds
+
+- Very dark violet (main background): hsl(268, 75%, 9%)
+- Very dark violet (toggle background, keypad background, screen background): hsl(268, 71%, 12%)
+
+#### Keys
+
+- Dark violet (key background): hsl(281, 89%, 26%)
+- Vivid magenta (key shadow): hsl(285, 91%, 52%)
+
+- Pure cyan (key background, toggle): hsl(176, 100%, 44%)
+- Soft cyan (key shadow): hsl(177, 92%, 70%)
+
+- Very dark violet (key background): hsl(268, 47%, 21%)
+- Dark magenta (key shadow): hsl(290, 70%, 36%)
+
+#### Text
+
+- Light yellow: hsl(52, 100%, 62%)
+- Very dark blue: hsl(198, 20%, 13%)
+- White (text): hsl(0, 0, 100%)
+
+
+*/
+
+:root{
+    --main-background: hsl(268, 75%, 9%);
+    --toggle-background-keypad-background-screen-background :hsl(268, 71%, 12%);
+    --delete-reset:hsl(281, 89%, 26%);
+    --delete-reset-shadow:hsl(285, 91%, 52%);
+    --equalto-toggle-color :hsl(176, 100%, 44%);
+    --equalto-shadow:  hsl(177, 92%, 70%);
+    --key-background-color: hsl(268, 47%, 21%);
+    --key-shadow:hsl(290, 70%, 36%);
+    --text-color:hsl(52, 100%, 62%);
+
+
+
+}
+
+
+
+body{
+    background-color: var(--main-background)
+}
+
+
+
+.calculator .calc-logo{
+    color: var(--text-color);
+    
+}
+
+.theme-form{
+    background-color: var(--toggle-background-keypad-background-screen-background);
+
+}
+
+.custom-check .checkmark{
+   
+    background-color: var(--equalto-toggle-color);
+
+}
+
+.theme-text,
+.num span{
+    color: var(--text-color) !important;
+    font-weight: 700;
+}
+
+.screen{
+    background-color: var(--toggle-background-keypad-background-screen-background);
+}
+
+.screen .form-screen p{
+    color: var(--text-color);
+}
+
+
+.screen .form-screen p::after{
+   
+    background-color: var(--text-color)
+
+    
+}
+
+
+.keypad{
+    background-color: var(--toggle-background-keypad-background-screen-background);
+
+}
+
+
+.keys button{
+    color: var(--text-color);
+    background-color: var(--key-background-color);
+    box-shadow: 0 .2rem .08rem  var(--key-shadow);
+    
+   
+}
+
+
+
+.keys button:nth-child(4){
+    background-color: var(--delete-reset);
+    box-shadow: 0 .2rem .08rem  var(--delete-reset-shadow);
+    
+    
+}
+
+
+.keys button:nth-child(17){
+    background-color: var(--delete-reset);
+    box-shadow: 0 .2rem .08rem  var(--delete-reset-shadow);
+    
+}
+.keys button:nth-child(18){
+
+    background-color: var(--equalto-toggle-color);
+    box-shadow: 0 .2rem .08rem  var(--equalto-shadow);
+
+    color: white;
+    
+}
+
+.keys p:hover{
+    background-color: white;
+}
+
+  

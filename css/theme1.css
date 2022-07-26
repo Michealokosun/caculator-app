@@ -1,0 +1,129 @@
+/*
+Light gray (main background): hsl(0, 0%, 90%)
+- Grayish red (toggle background, keypad background): hsl(0, 5%, 81%)
+- Very light gray (screen background): hsl(0, 0%, 93%)
+
+#### Keys
+
+- Dark moderate cyan (key background): hsl(185, 42%, 37%)
+- Very dark cyan (key shadow): hsl(185, 58%, 25%)
+
+- Orange (key background, toggle): hsl(25, 98%, 40%)
+- Dark orange (key shadow): hsl(25, 99%, 27%)
+
+- Light grayish yellow (key background): hsl(45, 7%, 89%)
+- Dark grayish orange (key shadow): hsl(35, 11%, 61%)
+
+#### Text
+
+- Very dark grayish yellow: hsl(60, 10%, 19%)
+- White (text): hsl(0, 0, 100%)
+
+*/
+
+:root{
+    --main-background:  hsl(0, 0%, 90%);
+    --toggle-background-keypad-background:  hsl(0, 5%, 81%);
+    --screen-background: hsl(0, 0%, 93%);
+    --delete-reset-background:  hsl(185, 42%, 37%);
+    --delete-reset-shadow:  hsl(185, 58%, 25%); /*box-shadow: 0 .2rem .08rem  hsl(220, 39%, 32%) */
+    --key-background-toggle:hsl(25, 98%, 40%);
+    --equalto-background-shadow: hsl(25, 99%, 27%);
+    --key-background: hsl(45, 7%, 89%);
+    --key-shadow: hsl(35, 11%, 61%);
+    --text-color1:  hsl(60, 10%, 19%);
+    --text-color2: hsl(6, 1%, 100%);
+
+
+
+
+}
+
+
+body{
+    background-color: var(--main-background);
+}
+
+.calculator .calc-logo{
+    color: var(--text-color1);
+    
+}
+
+.theme-form{
+    background-color: var(--toggle-background-keypad-background);
+
+}
+
+.custom-check .checkmark{
+   
+    background-color: var(--key-background-toggle);
+
+}
+
+.theme-text,
+.num span{
+    color: hsl(60, 10%, 19%) !important;
+    font-weight: 700;
+}
+
+.screen{
+    background-color: var(--screen-background);
+}
+
+.screen .form-screen p{
+    color: var(--text-color1);
+}
+
+
+.screen .form-screen p::after{
+   
+    background-color: var(--text-color1)
+
+    
+}
+
+
+.keypad{
+    background-color: var(--toggle-background-keypad-background);
+    border-radius: 16px;
+
+}
+
+
+.keys button{
+    color: var(--text-color1);
+    background-color: var(--key-background);
+    box-shadow: 0 .2rem .08rem  hsl(35, 11%, 61%);
+    
+   
+}
+
+
+
+.keys button:nth-child(4){
+    background-color: var(--delete-reset-background);
+    box-shadow: 0 .2rem .08rem  hsl(185, 58%, 25%);
+    
+    
+}
+
+
+.keys button:nth-child(17){
+    background-color: var(--delete-reset-background);
+    box-shadow: 0 .2rem .08rem  hsl(185, 58%, 25%);
+    
+}
+.keys button:nth-child(18){
+
+    background-color: var(--key-background-toggle);
+    box-shadow: 0 .2rem .08rem  hsl(25, 99%, 27%);
+
+    color: white;
+    
+}
+
+.keys p:hover{
+    background-color: white;
+}
+
+ 
